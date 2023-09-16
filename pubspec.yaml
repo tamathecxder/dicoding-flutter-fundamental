@@ -78,6 +78,12 @@ flutter:
     - family: Oswald
       fonts:
         - asset: assets/fonts/static/Oswald-Regular.ttf
+    - family: Staatliches
+      fonts:
+        - asset: assets/fonts/Staatliches-Regular.ttf
+    - family: Oxygen
+      fonts:
+        - asset: assets/fonts/Oxygen-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
