@@ -1,78 +1,56 @@
 import 'package:flutter/material.dart';
 
-void main(List<String> args) {
-  runApp(const HiMomApp());
-}
+void main() => runApp(const MyApp());
 
-class HiMomApp extends StatelessWidget {
-  const HiMomApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Flutter Demo",
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Hi, Mom!"),
-          centerTitle: true,
-        ),
-        body: const Center(
-          child: BiggerText(text: "Hi, Mom!"),
-        )
-      ),
+      home: const FirstScreen(), // Panggil FirstScreen di sini
     );
   }
 }
 
-class Heading extends StatelessWidget {
- 
-  final String text;
- 
-  const Heading({Key? key, required this.text}) : super(key: key);
- 
-  @override
-  Widget build(BuildContext context){
-    return Text(
-      text,
-      style: const TextStyle(
-        fontSize: 24.0,
-        fontWeight: FontWeight.bold,
-      ),
-    );
-  }
-}
+class FirstScreen extends StatelessWidget {
+  const FirstScreen({Key? key}) : super(key: key);
 
-class BiggerText extends StatefulWidget {
-  final String text;
- 
-  const BiggerText({Key? key, required this.text}) : super(key: key);
- 
-  @override
-  _BiggerTextState createState() => _BiggerTextState();
-}
- 
- 
-class _BiggerTextState extends State<BiggerText> {
-  double _textSize = 16.0;
- 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(widget.text, style: TextStyle(fontSize: _textSize)),
-        ElevatedButton(
-          child: const Text("Perbesar"),
-          onPressed: () {
-            setState(() {
-              _textSize = 32.0;
-            });
-          },
-        )
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('First Screen'),
+        actions: [
+          IconButton(
+            icon: const Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+            onPressed: () {},
+          ),
+        ],
+        leading: IconButton(
+          icon: const Icon(
+            Icons.menu,
+            color: Colors.white,
+          ),
+          onPressed: () {},
+        ),
+      ),
+      body: const Center(
+        child: Text('First Screen'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(
+          Icons.add,
+        ),
+        onPressed: () {},
+      ),
     );
   }
 }
