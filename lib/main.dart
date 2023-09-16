@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fundamental/navigation/home_screen.dart';
+import 'package:flutter_fundamental/responsive/layout_builder.dart';
+import 'package:flutter_fundamental/responsive/media_query_example.dart';
+import 'package:flutter_fundamental/responsive/responsive_page.dart';
 
-void main(List<String> args) => runApp(const InitScreen());
+void main(List<String> args) => runApp(const ResponsiveApp());
 
-class InitScreen extends StatelessWidget {
-  const InitScreen({super.key});
+class ResponsiveApp extends StatelessWidget {
+  const ResponsiveApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeScreen(),
+      home: ResponsivePage(),
     );
   }
 }
