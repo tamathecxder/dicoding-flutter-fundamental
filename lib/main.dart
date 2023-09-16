@@ -20,7 +20,7 @@ class HiMomApp extends StatelessWidget {
           centerTitle: true,
         ),
         body: const Center(
-          child: Heading(text: "Hi, Mom!"),
+          child: BiggerText(text: "Hi, Mom!"),
         )
       ),
     );
