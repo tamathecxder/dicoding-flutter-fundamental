@@ -10,7 +10,7 @@ class PaddingApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Container Decoration"),
+          title: const Text("Padding & Center Widget"),
           centerTitle: true,
         ),
         body: Center(
