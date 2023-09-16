@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './tourist_spot_app/detail_screen.dart';
+import './tourist_destination/detail_screen.dart';
 
 void main(List<String> args) {
   runApp(const TouristDestinationApp());
