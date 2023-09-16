@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fundamental/responsive/layout_builder.dart';
-import 'package:flutter_fundamental/responsive/media_query_example.dart';
-import 'package:flutter_fundamental/responsive/responsive_page.dart';
 
-void main(List<String> args) => runApp(const ResponsiveApp());
+import './tourist_destination/main_screen.dart';
 
-class ResponsiveApp extends StatelessWidget {
-  const ResponsiveApp({super.key});
+void main(List<String> args) {
+  runApp(const TouristDestinationApp());
+}
+
+class TouristDestinationApp extends StatelessWidget {
+  const TouristDestinationApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: ResponsivePage(),
+    return MaterialApp(
+      title: "Wisata Bandung",
+      theme: ThemeData(),
+      home: const MainScreen(),
     );
   }
 }
