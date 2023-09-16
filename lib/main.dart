@@ -19,7 +19,27 @@ class HiMomApp extends StatelessWidget {
           title: const Text("Hi, Mom!"),
           centerTitle: true,
         ),
-        body: const Center(child: Text("Hi, Mom!")),
+        body: const Center(
+          child: Heading(text: "Hi, Mom!"),
+        )
+      ),
+    );
+  }
+}
+
+class Heading extends StatelessWidget {
+ 
+  final String text;
+ 
+  const Heading({Key? key, required this.text}) : super(key: key);
+ 
+  @override
+  Widget build(BuildContext context){
+    return Text(
+      text,
+      style: const TextStyle(
+        fontSize: 24.0,
+        fontWeight: FontWeight.bold,
       ),
     );
   }
