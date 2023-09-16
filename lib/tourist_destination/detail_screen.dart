@@ -5,17 +5,22 @@ class DetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    var informationTextStyle = const TextStyle(fontFamily: 'Oxygen');
+
+    return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          Image.asset(
+            'assets/images/farm-house.jpg',
+          ),
           Container(
             margin: const EdgeInsets.only(top: 16.0),
             child: const Text(
               "Farm House Lembang",
               style: TextStyle(
+                fontFamily: 'Staatliches',
                 fontSize: 30.0,
-                fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
             ),
@@ -26,24 +31,33 @@ class DetailScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
-                  children: const <Widget>[
-                    Icon(Icons.calendar_today),
-                    SizedBox(height: 8.0),
-                    Text('Open Everyday'),
+                  children: <Widget>[
+                    const Icon(Icons.calendar_today),
+                    const SizedBox(height: 8.0),
+                    Text(
+                      'Open Everyday',
+                      style: informationTextStyle,
+                    ),
                   ],
                 ),
                 Column(
-                  children: const <Widget>[
-                    Icon(Icons.access_time_filled_sharp),
-                    SizedBox(height: 8.0),
-                    Text('09.00 - 20.00'),
+                  children: <Widget>[
+                    const Icon(Icons.access_time_filled_sharp),
+                    const SizedBox(height: 8.0),
+                    Text(
+                      '09.00 - 20.00',
+                      style: informationTextStyle,
+                    ),
                   ],
                 ),
                 Column(
-                  children: const <Widget>[
-                    Icon(Icons.monetization_on),
-                    SizedBox(height: 8.0),
-                    Text('Rp. 25.000'),
+                  children: <Widget>[
+                    const Icon(Icons.monetization_on),
+                    const SizedBox(height: 8.0),
+                    Text(
+                      'Rp. 25.000',
+                      style: informationTextStyle,
+                    ),
                   ],
                 ),
               ],
@@ -55,6 +69,44 @@ class DetailScreen extends StatelessWidget {
               'Berada di jalur utama Bandung-Lembang, Farm House menjadi objek wisata yang tidak pernah sepi pengunjung. Selain karena letaknya strategis, kawasan ini juga menghadirkan nuansa wisata khas Eropa. Semua itu diterapkan dalam bentuk spot swafoto Instagramable.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16.0),
+            ),
+          ),
+          SizedBox(
+            height: 200.0,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                    child: Image.network(
+                        'https://media-cdn.tripadvisor.com/media/photo-s/0d/7c/59/70/farmhouse-lembang.jpg'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                    child: Image.network(
+                        'https://media-cdn.tripadvisor.com/media/photo-w/13/f0/22/f6/photo3jpg.jpg'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                    child: Image.network(
+                        'https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg'),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
